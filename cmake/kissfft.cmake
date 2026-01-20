@@ -66,6 +66,13 @@ function(download_kissfft)
     set(BUILD_SHARED_LIBS ON)
   endif()
 
+  set_target_properties(kissfft
+      PROPERTIES
+        POSITION_INDEPENDENT_CODE ON
+        C_VISIBILITY_PRESET hidden
+        CXX_VISIBILITY_PRESET hidden
+    )
+
   set(kissfft_SOURCE_DIR ${kissfft_SOURCE_DIR} PARENT_SCOPE)
 
   include_directories(kissfft

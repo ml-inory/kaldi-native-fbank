@@ -6,6 +6,7 @@ cmake ..  \
   -DCMAKE_INSTALL_PREFIX=../install/ax630c \
   -DCMAKE_BUILD_TYPE=Release  \
   -DBUILD_SHARED_LIBS=OFF \
+  -DCMAKE_POSITION_INDEPENDENT_CODE=ON  \
   $@
 make -j4
 make install
